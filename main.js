@@ -55,7 +55,7 @@ function fillLabel(){
 		result[i] = 253;	
 	}*/
 	ctx.putImageData(data, 100, 100);
-	ctx.drawImage(imga, 0, 0, image.width, image.height);
+	ctx.drawImage(img, 0, 0, image.width, image.height);
 }
 
 function fillLabel2()
