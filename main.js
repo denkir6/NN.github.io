@@ -1,4 +1,4 @@
-const textBox = document.createElement("INPUT");
+1const textBox = document.createElement("INPUT");
 const buttn = document.createElement("BUTTON");
 const textNode = document.createTextNode("Calculate");
 const lbl = document.createElement("LABEL");
@@ -48,7 +48,7 @@ function fillLabel(){
 			result.push(data[2]);
 		}
 	}
-	console.log("result");/*
+	console.log("result1");/*
 
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
