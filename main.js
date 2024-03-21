@@ -42,10 +42,11 @@ function fillLabel(){
 		for (let x = 0; x < canvas.width; x++) {
 			let data = ctx.getImageData(x, y, 1, 1).data;
 			result[y].push(data[0]);
-      result[y].push(data[1]);
-      result[y].push(data[2]);
-    }
-  }
+			result[y].push(data[1]);
+			result[y].push(data[2]);
+		}
+	}
+	console.log(result);
 }
 
 function fillLabel2()
