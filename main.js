@@ -48,13 +48,13 @@ function fillLabel(){
 			result.push(data[2]);
 		}
 	}
+	console.log("result");
 
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
 	}
 	ctx.putImageData(result, 526, 480);
 	document.body.appendChild(canvas);
-	console.log("result");
 }
 
 function fillLabel2()
