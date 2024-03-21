@@ -40,6 +40,8 @@ function fillLabel(){
 	var imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
 	var data = imageData.data;
 
+	network = nTestNetwork();
+
 	/*let result = [];
 	for (let y = 0; y < data.length; y+=4) 
 	{
