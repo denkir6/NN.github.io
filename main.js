@@ -31,6 +31,8 @@ function fillLabel(){
 	const image = document.createElement('img');
 	image.setAttribute('src', "20150517_122008000_iOS.jpg");
 	const canvas = document.createElement('canvas');
+	image.width = image.width/2;
+	image.height = image.height/2;
 	canvas.width = image.width;
 	canvas.height = image.height;
 	canvas.getContext('2d').drawImage(image, 0, 0, image.width, image.height);
