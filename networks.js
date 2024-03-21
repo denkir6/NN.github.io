@@ -1,6 +1,6 @@
 function nTestNetwork()
 {
-	var network = buildNNetwork(1);
+	var network = buildNNetwork(0);
 	network.inputLayer = createLayer(1009920)
 			
 	/*for (var i = 0; i < network.hiddenLayers.length; i++)
