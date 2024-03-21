@@ -38,34 +38,16 @@ function fillLabel(){
 	canvas.getContext('2d').drawImage(image, 0, 0, image.width, image.height);
 	const ctx = canvas.getContext('2d');
 	document.body.appendChild(canvas);
+	var imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
+	var data = imageData.data;
 
 	let result = [];
-	for (let y = 0; y < canvas.height; y++) {
-		result.push([]);
-		for (let x = 0; x < canvas.width; x++) {
-			let data = ctx.getImageData(x, y, 1, 1).data;
-			result[y].push(data[0]);
-			result[y].push(data[1]);
-			result[y].push(data[2]);
-		}
+	for (let y = 0; y < canvas.length; y++) 
+	{
+		data[y] = 50;
 	}
+	ctx.putImageData(imageData, 0, 0);
 
-	//var data = [];
-	for (let y = 0; y < canvas.height; y++)
-		for (let x = 0; x < canvas.width; x++){
-		let d = ctx.getImageData(x, y, 1, 1);
-		d.data[0] = 50;
-		ctx.putImageData(d, x, y);
-		}
-	//var data = ctx.getImageData(1,1,1,1);
-	//console.log(data);
-	console.log("Lst");/*
-
-	for (var i = 0; i < result.length; i++){
-		result[i] = 253;	
-	}*/
-	
-	ctx.drawImage(image, 0, 0, image.width, image.height);
 }
 
 function fillLabel2()
