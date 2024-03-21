@@ -152,9 +152,8 @@ class nNetwork
 	{
 		for (var i = 0; i < values.length; i++)
 		{
-			var neur = new neuron();
+			var neur = this.inputLayer.neurons[i];
 			neur.inputVal = Number(values[i]);
-			this.inputLayer.addNeuron(neur);
 		}
 	}
 	
