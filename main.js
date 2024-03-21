@@ -41,11 +41,12 @@ function fillLabel(){
 	var data = imageData.data;
 
 	let result = [];
-	for (let y = 0; y < canvas.length; y+=4) 
+	for (let y = 0; y < data.length; y+=4) 
 	{
 		data[y] = 50;
 	}
 	ctx.putImageData(imageData, 0, 0);
+	console.log(data);
 	document.body.appendChild(canvas);
 
 }
