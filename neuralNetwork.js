@@ -237,10 +237,10 @@ function processNeuron(neur, f)
 		case "sigmoidFunction":
 			outputVal = sigmoidFunction(inputVal);
 			break;
-		case: "‎ConvertDecTo8Bit":
+		case "‎ConvertDecTo8Bit":
 			outputVal = ‎ConvertDecTo8Bit(inputVal);
 			break;
-		case: "‎Convert8BitToDec":
+		case "‎Convert8BitToDec":
 			outputVal = ‎Convert8BitToDec(inputVal);
 			break;
 	}
