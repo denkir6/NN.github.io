@@ -48,7 +48,11 @@ function fillLabel(){
 			result.push(data[2]);
 		}
 	}
-	console.log(result);
+
+	for (var i = 0; i < result.length; i++){
+		result[i] = 253;	
+	}
+	ctx.putImageData(result, 1, 1);
 	document.body.appendChild(canvas);
 }
 
