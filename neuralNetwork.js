@@ -180,7 +180,10 @@ class nNetwork
 		for (var i = 0; i < this.allLayers.length; i++)
 		{
 			var l = this.allLayers[i];
-			processLayer(l);
+			if (l == this.inputLayer)
+				processLayer(l, "‎Convert8BitToDec");
+			if (l == this.outputLayer)
+				processLayer(l, "ConvertDecTo8Bit");
 		}
 	}
 	
@@ -230,11 +233,18 @@ function processNeuron(neur, f)
 	var result = 0;
 	var inputVal = neur.inputVal;
 	var outputVal = 0;
-	switch (f)
+	switch (f){
 		case "sigmoidFunction":
-				outputVal = sigmoidFunction(inputVal);
-				break;
-				case: "
+			outputVal = sigmoidFunction(inputVal);
+			break;
+		case: "‎ConvertDecTo8Bit":
+			outputVal = ‎ConvertDecTo8Bit(inputVal);
+			break;
+		case: "‎Convert8BitToDec":
+			outputVal = ‎Convert8BitToDec(inputVal);
+			break;
+	}
+			
 	neur.outputVal = outputVal;
 	
 	passOutputVal(neur);
@@ -242,12 +252,12 @@ function processNeuron(neur, f)
 	//console.log(outputVal);
 }
 
-function processLayer(l)
+function processLayer(l, f)
 {
 	for (var i = 0; i < l.neuronsNum; i++)
 	{
 		var neur = l.neurons[i];
-		processNeuron(neur);
+		processNeuron(neur, f);
 	}
 }
 
