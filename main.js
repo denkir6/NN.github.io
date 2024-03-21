@@ -29,7 +29,23 @@ var firstStep = true;
 
 function fillLabel(){
 	const image = document.createElement('img');
-	image.setAttribute('src', imageFile);
+	image.setAttribute('src', "20150517_122008000_iOS.jpg");
+	const canvas = document.createElement('canvas');
+	canvas.width = image.width;
+	canvas.height = image.height;
+	canvas.getContext('2d').drawImage(image, 0, 0, image.width, image.height);
+	const ctx = canvas.getContext('2d');
+
+	let result = [];
+	for (let y = 0; y < canvas.height; y++) {
+		result.push([]);
+		for (let x = 0; x < canvas.width; x++) {
+			let data = ctx.getImageData(x, y, 1, 1).data;
+			result[y].push(data[0]);
+      result[y].push(data[1]);
+      result[y].push(data[2]);
+    }
+  }
 }
 
 function fillLabel2()
