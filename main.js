@@ -44,6 +44,9 @@ function fillLabel(){
 	for (let y = 0; y < data.length; y+=4) 
 	{
 		data[y] = 0;
+		data[y+1] = 0;
+		data[y+2] = 0;
+		data[y+3] = 0;
 	}
 	ctx.putImageData(imageData, 0, 0);
 	console.log(data);
