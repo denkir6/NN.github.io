@@ -53,7 +53,7 @@ function fillLabel(){
 	//var data = [];
 	for (let y = 0; y < canvas.height; y++)
 		for (let x = 0; x < canvas.width; x++){
-		let d = ctx.getImgeData(x, y, 1, 1);
+		let d = ctx.getImageData(x, y, 1, 1);
 		d.data[0] = 50;
 		ctx.putImageData(d, 100, 100);
 		}
