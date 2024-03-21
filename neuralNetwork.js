@@ -225,11 +225,16 @@ function createLayer(neuronsN)
 	return nL;
 }
 
-function processNeuron(neur)
+function processNeuron(neur, f)
 {
 	var result = 0;
 	var inputVal = neur.inputVal;
-	var outputVal = sigmoidFunction(inputVal);
+	var outputVal = 0;
+	switch (f)
+		case "sigmoidFunction":
+				outputVal = sigmoidFunction(inputVal);
+				break;
+				case: "
 	neur.outputVal = outputVal;
 	
 	passOutputVal(neur);
