@@ -41,14 +41,23 @@ function fillLabel(){
 
 	let result = [];
 	for (let y = 0; y < canvas.height; y++) {
+		result.push([]);
 		for (let x = 0; x < canvas.width; x++) {
 			let data = ctx.getImageData(x, y, 1, 1).data;
-			result.push(data[0]);
-			result.push(data[1]);
-			result.push(data[2]);
+			result[y].push(data[0]);
+			result[y].push(data[1]);
+			result[y].push(data[2]);
 		}
 	}
-	var data = ctx.getImageData(1,1,1,1);
+
+	var data = [];
+	for (let y = 0; y < canvas.height; y++)
+		for (ley x = 0; x < canvas.width; x++){
+		let d = ctx.getImgeData(x, y, 1, 1);
+		d.data[0] = 50;
+		data.push(d);
+		}
+	//var data = ctx.getImageData(1,1,1,1);
 	console.log(data);
 	console.log("Last Changes");/*
 
