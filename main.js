@@ -52,7 +52,7 @@ function fillLabel(){
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
 	}
-	ctx.putImageData(result, 1, 1);
+	ctx.putImageData(result, 0, 0);
 	document.body.appendChild(canvas);
 }
 
