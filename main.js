@@ -49,7 +49,7 @@ function fillLabel(){
 		}
 	}
 	var data = ctx.getImageData(1,1,1,1);
-	console.log(data);/*
+	/*console.log(data);
 
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
