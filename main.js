@@ -52,14 +52,14 @@ function fillLabel(){
 
 	var data = [];
 	for (let y = 0; y < canvas.height; y++)
-		for (ley x = 0; x < canvas.width; x++){
+		for (let x = 0; x < canvas.width; x++){
 		let d = ctx.getImgeData(x, y, 1, 1);
 		d.data[0] = 50;
 		data.push(d);
 		}
 	//var data = ctx.getImageData(1,1,1,1);
 	console.log(data);
-	console.log("Last Changes");/*
+	console.log("Last");/*
 
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
