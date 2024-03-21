@@ -49,13 +49,14 @@ function fillLabel(){
 		}
 	}
 	var data = ctx.getImageData(1,1,1,1);
-	console.log(data);/*
+	console.log(data);
+	console.log("Last Changes");/*
 
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
 	}*/
 	ctx.putImageData(data, 100, 100);
-	ctx.drawImage(img, 0, 0, image.width, image.height);
+	ctx.drawImage(image, 0, 0, image.width, image.height);
 }
 
 function fillLabel2()
