@@ -40,7 +40,7 @@ function fillLabel(){
 	var imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
 	var data = imageData.data;
 
-	let result = [];
+	/*let result = [];
 	for (let y = 0; y < data.length; y+=4) 
 	{
 		data[y] = 0;
@@ -49,7 +49,7 @@ function fillLabel(){
 		data[y+3] = 255;
 	}
 	ctx.putImageData(imageData, 0, 0);
-	console.log(data);
+	console.log(data);*/
 	document.body.appendChild(canvas);
 
 }
