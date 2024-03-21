@@ -10,3 +10,13 @@ function tangentFunction(x)
 {
 	return 2 * sigmoidFunction(2 * x) - 1;
 }
+
+function Convert8BitToDec(x)
+{
+	return x/256;
+}
+
+function ConvertDecTo8Bit(x)
+{
+	return (x*256).toFixed(0);
+}
