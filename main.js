@@ -55,7 +55,7 @@ function fillLabel(){
 		for (let x = 0; x < canvas.width; x++){
 		let d = ctx.getImageData(x, y, 1, 1);
 		d.data[0] = 50;
-		ctx.putImageData(d, 100, 100);
+		ctx.putImageData(d, x, y);
 		}
 	//var data = ctx.getImageData(1,1,1,1);
 	//console.log(data);
