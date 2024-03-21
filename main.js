@@ -50,12 +50,12 @@ function fillLabel(){
 		}
 	}
 
-	var data = [];
+	//var data = [];
 	for (let y = 0; y < canvas.height; y++)
 		for (let x = 0; x < canvas.width; x++){
 		let d = ctx.getImgeData(x, y, 1, 1);
 		d.data[0] = 50;
-		data.push(d);
+		ctx.putImageData(d, 100, 100);
 		}
 	//var data = ctx.getImageData(1,1,1,1);
 	console.log(data);
@@ -64,7 +64,7 @@ function fillLabel(){
 	for (var i = 0; i < result.length; i++){
 		result[i] = 253;	
 	}*/
-	ctx.putImageData(data, 100, 100);
+	
 	ctx.drawImage(image, 0, 0, image.width, image.height);
 }
 
