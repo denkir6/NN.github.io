@@ -37,16 +37,16 @@ function fillLabel(){
 	canvas.height = image.height;
 	canvas.getContext('2d').drawImage(image, 0, 0, image.width, image.height);
 	const ctx = canvas.getContext('2d');
-	document.body.appendChild(canvas);
 	var imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
 	var data = imageData.data;
 
 	let result = [];
-	for (let y = 0; y < canvas.length; y++) 
+	for (let y = 0; y < canvas.length; y+=4) 
 	{
 		data[y] = 50;
 	}
 	ctx.putImageData(imageData, 0, 0);
+	document.body.appendChild(canvas);
 
 }
 
