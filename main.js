@@ -41,17 +41,12 @@ function fillLabel(){
 	var data = imageData.data;
 
 	network = nTestNetwork();
+	network.sendValues(data);
+	network.process()
 
-	/*let result = [];
-	for (let y = 0; y < data.length; y+=4) 
-	{
-		data[y] = 0;
-		data[y+1] = 0;
-		data[y+2] = 50;
-		data[y+3] = 255;
-	}
+	var result = network.getResult();
+	imageData.data = result;
 	ctx.putImageData(imageData, 0, 0);
-	console.log(data);*/
 	document.body.appendChild(canvas);
 
 }
