@@ -49,7 +49,6 @@ function fillLabel(){
 		}
 	}
 	document.body.appendChild(canvas);
-	console.log(result);
 }
 
 function fillLabel2()
