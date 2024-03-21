@@ -58,7 +58,7 @@ function fillLabel(){
 		ctx.putImageData(d, 100, 100);
 		}
 	//var data = ctx.getImageData(1,1,1,1);
-	console.log(data);
+	//console.log(data);
 	console.log("Lt");/*
 
 	for (var i = 0; i < result.length; i++){
