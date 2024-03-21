@@ -28,35 +28,8 @@ var network;
 var firstStep = true;
 
 function fillLabel(){
-	
-	var val = textBox.value;
-	var valArray = Array.from(val);
-	console.log(val);
-	console.log (valArray);
-	
-	network = nTranslatorNetworkRUEN();
-	ruAlphabetValues(network, valArray);
-	
-	/*
-	if (network == null)
-	{
-		network = nTranslatorNetworkRUEN();
-		network.updateValues(val);
-		network.buildRandomNetwork();
-	}
-	if (network != null)
-	{
-		network.updateInputValues(val);
-	}
-	
-	network.process();
-
-	var txt = network.getResult()[0];
-	
-	lbl.innerText = txt;
-	var neur2 = network.hiddenLayers[0].neurons[0];
-	var w = neur2.connections[0].weight;
-	*/
+	const image = document.createElement('img');
+	image.setAttribute('src', imageFile);
 }
 
 function fillLabel2()
