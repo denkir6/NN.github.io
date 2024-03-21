@@ -45,7 +45,7 @@ function fillLabel(){
 	{
 		data[y] = 0;
 		data[y+1] = 0;
-		data[y+2] = 0;
+		data[y+2] = 50;
 		data[y+3] = 255;
 	}
 	ctx.putImageData(imageData, 0, 0);
