@@ -98,54 +98,20 @@ class nNetwork
 	buildConnections()
 	{
 		this.allConnections = [];
-		for (var i = 0; i < this.inputLayer.neuronsNum; i++)
+		for (var i = 0; i < this.allLayers.length - 1; i++)
 		{
-			var neur = this.inputLayer.neurons[i];
-			for (var j = 0; j < this.hiddenLayers[0].neuronsNum; j++)
-			{
-				var rightNeur = this.hiddenLayers[0].neurons[j];
-				var conn = neur.createNConnection(rightNeur);
-				this.allConnections.push(conn);
-			}
-		}
-		
-		for (var i = 0; i < this.hiddenLayers.length; i++)
-		{
-			var l = this.hiddenLayers[i];
+			var l = this.allLayers[i];
+			var lN = this.allLayers[i+1];
 			for (var j = 0; j < l.neuronsNum; j++)
 			{
 				var neur = l.neurons[j];
-				var nextIt = j + 1;
-				
-				if (nextIt >= l.neuronsNum)
-				{
-					for (var k = 0; k < this.outputLayer.neuronsNum; k++)
+				for (var k = 0; k < lN.neuronsNum; k++)
 					{
-						var rightNeur = this.outputLayer.neurons[j];
+						var rightNeur = lN.neurons[k];
 						var conn = neur.createNConnection(rightNeur);
 						this.allConnections.push(conn);
 					}
-				}
-				
-				if (nextIt < l.neuronsNum)
-				{
-					console.log("checkpoint 2");
-					for (var k = 0; k < l.neurons[nextIt].neuronsNum; k++)
-					{	
-						var rightNeur = this.hiddenLayers[nextIt].neurons[k];
-						var conn = neur.createNConnection(rightNeur);
-						this.allConnections.push(conn);
-					}
-				}
-				
 			}
-			
-			
-			
-			
-			
-			
-			
 		}
 	}
 	
