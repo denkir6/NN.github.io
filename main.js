@@ -1,4 +1,4 @@
-1const textBox = document.createElement("INPUT");
+const textBox = document.createElement("INPUT");
 const buttn = document.createElement("BUTTON");
 const textNode = document.createTextNode("Calculate");
 const lbl = document.createElement("LABEL");
