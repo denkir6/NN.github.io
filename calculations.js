@@ -29,10 +29,10 @@ function connectLayers(l)
 	}
 }
 
-function processNetwork(num)
+function processNetwork()
 {
-	network.layers[0].neurons[0].inputVal = num;
-	network.layers[0].neurons[0].outputVal = num;
+	// network.layers[0].neurons[0].inputVal = num;
+	// network.layers[0].neurons[0].outputVal = num;
 	for (var i = 1; i < network.layersNum; i++)
 		connectLayers(network.layers[i]);
 }
