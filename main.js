@@ -42,7 +42,7 @@ function fillLabel(){
 
 	network = nTestNetwork();
 	network.sendValues(data);
-	network.process()
+	network.process();
 
 	var result = network.getResult();
 	imageData.data = result;
