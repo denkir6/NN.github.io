@@ -43,9 +43,8 @@ function fillLabel(){
 	network = nTestNetwork();
 	network.sendValues(data);
 	network.process();
-	//processNetwork();
 
-	var result = getResult();
+	var result = network.getResult();
 	imageData.data = result;
 	ctx.putImageData(imageData, 0, 0);
 	document.body.appendChild(canvas);
