@@ -241,7 +241,7 @@ function processNeuron(neur, f)
 			outputVal = ConvertDecTo8Bit(inputVal);
 			break;
 		case "‎‎Convert8BitToDec":
-			outputVal = ‎‎Convert8BitToDec(inputVal);
+			outputVal = Convert8BitToDec(inputVal);
 			break;
 	}
 			
