@@ -41,6 +41,7 @@ function fillLabel(){
 	var data = imageData.data;
 
 	network = nTestNetwork();
+	network.buildRandomNetwork();
 	network.sendValues(data);
 	network.process();
 
