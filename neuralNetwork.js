@@ -82,7 +82,6 @@ class nNetwork
 		this.hiddenLayers = [];
 		this.outputLayer = new nLayer();
 		this.allLayers = [];
-		this.allConnections = [];
 	}
 	
 	refresh()
@@ -97,7 +96,6 @@ class nNetwork
 	//build Connections and add them to array
 	buildConnections()
 	{
-		this.allConnections = [];
 		for (var i = 0; i < this.allLayers.length - 1; i++)
 		{
 			var l = this.allLayers[i];
@@ -109,7 +107,6 @@ class nNetwork
 					{
 						var rightNeur = lN.neurons[k];
 						var conn = neur.createNConnection(rightNeur);
-						this.allConnections.push(conn);
 					}
 			}
 		}
